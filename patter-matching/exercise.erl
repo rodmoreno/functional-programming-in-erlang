@@ -1,6 +1,6 @@
 -module(exercise).
 
--export([howManyEqual/3, maxThree/3, test/0, xor1/2, xor2/2]).
+-export([how_many_equal/3, max_three/3, test/0, xor1/2, xor2/2]).
 
 % Some xor implementations
 xor1(X, Y) -> X =/= Y.
@@ -9,14 +9,14 @@ xor1(X, Y) -> X =/= Y.
 xor2(X, Y) -> not X == Y.
 
 % Find how many elements are equals
-howManyEqual(_X, _X, _X) -> 3;
-howManyEqual(_X, _X, _Y) -> 2;
-howManyEqual(_X, _Y, _X) -> 2;
-howManyEqual(_Y, _X, _X) -> 2;
-howManyEqual(_, _, _) -> 0.
+how_many_equal(_X, _X, _X) -> 3;
+how_many_equal(_X, _X, _Y) -> 2;
+how_many_equal(_X, _Y, _X) -> 2;
+how_many_equal(_Y, _X, _X) -> 2;
+how_many_equal(_, _, _) -> 0.
 
 % Fin max of three numbers
-maxThree(X, Y, Z) -> max(max(X, Y), Z).
+max_three(X, Y, Z) -> max(max(X, Y), Z).
 
 
 % Test time!
@@ -31,10 +31,10 @@ test() ->
     true = xor2(false, true),
     false = xor2(false, false),
     false = xor2(true, true),
-    % Test howManyEqual
-    0 = howManyEqual(34, 25, 36),
-    2 = howManyEqual(34, 25, 34),
-    3 = howManyEqual(34, 34, 34),
-    % Test maxThree
-    36 = maxThree(34,25,36),
+    % Test how_many_equal
+    0 = how_many_equal(34, 25, 36),
+    2 = how_many_equal(34, 25, 34),
+    3 = how_many_equal(34, 34, 34),
+    % Test max_three
+    36 = max_three(34,25,36),
     'All test passed! ✅'.
