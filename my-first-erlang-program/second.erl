@@ -2,7 +2,8 @@
 
 -export([areaT/2, hypotenuse/2, perimeterT/2]).
 
-hypotenuse(A, B) -> math:sqrt(first:square(A) + first:square(B)).
+hypotenuse(A, B) ->
+    math:sqrt(first:square(A) + first:square(B)).
 
 areaT(X, Y) -> first:mult(X, Y) / 2.
 
